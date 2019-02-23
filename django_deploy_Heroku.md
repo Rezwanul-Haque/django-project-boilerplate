@@ -50,7 +50,7 @@ $ pip freeze > requirements.txt
 ### So you have clean up the files accordingly.
 
 ## The WhiteNoise middleware should be placed directly after the Django SecurityMiddleware
-## 'whitenoise.middleware.WhiteNoiseMiddleware',
+'whitenoise.middleware.WhiteNoiseMiddleware',
 
 # Create a heroku new application
 $ heroku create app_name
@@ -77,7 +77,9 @@ $ heroku run python manage.py collectstatic
 
 # If some reason your localapps doesn't automatically migrate so manually migration needed.
 $ heroku bash
+
 $ >>> python manage.py makegrations app_name
+
 $ >>> python manage.py migrate app_name migration_number(e.g. 0001)
 
 # Hopefully after this your will live on heroku
