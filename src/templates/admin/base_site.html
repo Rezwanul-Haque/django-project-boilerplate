@@ -1,0 +1,14 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{# For changing admin panels heading  #}
+{% block branding %}
+  <h1 id="head">
+  <img class="brand_img" src="{% static 'img/default.png' %}" alt="BT Real Estate" height="50" width="80">  Admin Area
+  </h1>
+{% endblock branding %}
+
+{% block extrastyle %}
+  {# Custom css file to style the default admin panel #}
+  <link rel="stylesheet" href="{% static 'css/admin.css' %}" />
+{% endblock extrastyle %}
