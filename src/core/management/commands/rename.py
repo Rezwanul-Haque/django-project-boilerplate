@@ -12,19 +12,22 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
 
-
         new_project_name = kwargs['new_project_name']
 
         # bit of logic to rename the project
         current_project_name = os.environ.get("DJANGO_SETTINGS_MODULE").split('.')[0]
-        files_to_rename = [f'{current_project_name}/settings/base.py', f'{current_project_name}/wsgi.py', 'manage.py']﻿
+        # print('current project name: %s' %current_project_name)
+        files_to_rename = [f'{current_project_name}/settings/base.py', f'{current_project_name}/wsgi.py', 'manage.py']
+        # print('files to rename: %s' %files_to_rename)
+
         folder_to_rename = current_project_name
+        # print('folder to rename: %s' %folder_to_rename)
 
         for f in files_to_rename:
             with open(f, 'r') as file:
                 filedata = file.read()
 
-            filedata = filedata.replace('mysite', new_project_name)
+            filedata = filedata.replace(current_project_name, new_project_name)
 
             with open(f, 'w') as file:
                 file.write(filedata)
