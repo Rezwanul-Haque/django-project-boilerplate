@@ -44,6 +44,7 @@ A management custom command added to rename project name and all the related pla
 $ python manage.py rename project_name
 
 so current folder structure would be like this...
+
 django-project-boilerplate(project folder)
 
 --.git
