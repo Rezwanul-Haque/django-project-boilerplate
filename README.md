@@ -1,13 +1,14 @@
 # This is a project boilerplate for Django to deploy a secure Django project on any web hosting site.
 
-# Any commands with "$" at the beginning run on cmd/terminal of your local machine
+### Any commands with "$" at the beginning run on cmd/terminal of your local machine
 
-#Please install virtualenv on your local computer
+# Please install virtualenv on your local computer
 $ pip install virtualenv
 
-## This is what I like do when creating a virtual environment (you can change whatever you like)
+### This is what I like do when creating a virtual environment (you can change whatever you like)
 (I always like to called the virtual environment as venv)
 # Creating virtual environment
+
 $ virtualenv venv
 
 $ cd venv
@@ -32,14 +33,23 @@ $ python manage.py rename project_name
 
 so current folder structure would be like this...
 django-project-boilerplate(project folder)
+
 --.git
+
 --src(root folder)
+
 ----core
+
 ----mysite
+
 ----manage.py
+
 ----(...)
+
 --venv
+
 --README.md
+
 --LICENSE
 
 For security purpose this boilerplate uses python-decouple to secure all sensitive variables like SECRECT_KEY, Production level database username, password etc to a secure file called .env
@@ -60,7 +70,7 @@ In the src folder there are three apps already created by default
 
 # Core app
 Django suggest if any custom command has to create for a project it should be on the core > management > command folder.
-## Like I created the rename command
+Like I created the rename command
 
 # Pages app
 I created the pages app to handle the main pages like index(home), about, contact etc for now.
