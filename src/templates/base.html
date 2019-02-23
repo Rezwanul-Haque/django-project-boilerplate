@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!--css files -->
+    {% include "partials/_css.html" %}
+
+    <title>Site Name{% block title %}{% endblock title %}</title>
+  </head>
+  <body>
+    <!--Top bar -->
+    {% include "partials/_topbar.html" %}
+
+    <!-- Navbar -->
+    {% include "partials/_navbar.html" %}
+
+    <!-- Main Content -->
+    {% block content %}
+    {% endblock content %}
+
+    <!-- Footer -->
+    {% include "partials/_footer.html" %}
+
+    <!--javascripts files -->
+    {% include "partials/_javascripts.html" %}
+  </body>
+</html>
