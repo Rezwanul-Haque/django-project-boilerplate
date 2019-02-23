@@ -31,6 +31,7 @@ class Command(BaseCommand):
 
             with open(f, 'w') as file:
                 file.write(filedata)
-                os.rename(folder_to_rename, new_project_name)
+
+        os.rename(folder_to_rename, new_project_name)
 
         self.stdout.write(self.style.SUCCESS('Project has been renamed to %s' % new_project_name))
