@@ -21,7 +21,19 @@ $ source bin\activate
 
 $ cd ..
 
+## Installing requirements
+
+$ cd src
+
+$ pip install -r requirements-dev.txt
+
+### And for production environment
+
+$ pip install -r requirements-prod.txt
+
+
 Then I create the django project.
+
 $ django-admin startproject project_name
 
 ## But anyone who use this boilerplate will already create a project called mysite which is inside the src folder
