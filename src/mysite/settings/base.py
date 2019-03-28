@@ -8,16 +8,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = config('SECRET_KEY')
 
 
-# Application definition
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-]
 
+# Application definition
 THIRD_PARTY_APPS = [
     'django_extensions',
 
@@ -31,6 +23,16 @@ LOCAL_APPS = [
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
 ]
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
 
 INSTALLED_APPS += THIRD_PARTY_APPS + CUSTOM_MANAGEMENT_APPS + LOCAL_APPS
 
