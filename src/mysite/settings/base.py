@@ -8,11 +8,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = config('SECRET_KEY')
 
 
-
 # Application definition
 THIRD_PARTY_APPS = [
     'django_extensions',
-
 ]
 
 CUSTOM_MANAGEMENT_APPS = [
@@ -32,7 +30,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-
 
 INSTALLED_APPS += THIRD_PARTY_APPS + CUSTOM_MANAGEMENT_APPS + LOCAL_APPS
 
@@ -79,6 +76,13 @@ USE_L10N = True
 
 USE_TZ = True
 
+## Session Related Settings
+
+# SESSION_COOKIE_AGE = 1209600(Two Weeks)
+# SESSION_COOKIE_DOMAIN = mydomain.com (enable cross-domain cookies) or None (standard domain cookie)
+# SESSION_COOKIE_SECURE = True (HTTPS connection) or False (HTTP connection)
+# SESSION_EXPIRE_AT_BROWSER_CLOSE = True (session expire when browser closed) or False (session not expire when browser closed)
+# SESSION_SAVE_EVERY_REQUEST = True (save the session to the database on every request and session expiration is also updated each time) or False 
 
 # Static files (CSS, JavaScript, Images)
 

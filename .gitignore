@@ -18,7 +18,7 @@ __pycache__/
 #Python compiled file extention
 *.pyc
 
-migrations/
+# migrations/
 
 # Distribution / packaging
 .Python
